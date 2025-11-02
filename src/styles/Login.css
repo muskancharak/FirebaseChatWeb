@@ -1,0 +1,162 @@
+/* Login.css */
+/* Reset margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* removes scrollbar */
+}
+
+/* Fullscreen background */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;     /* exact viewport height */
+  width: 100vw;      /* exact viewport width */
+ background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+section p:first-child {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form div {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 4px rgba(37, 117, 252, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+form button {
+  background: #2575fc;
+  color: white;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #1a5edb;
+}
+
+.google-btn img {
+  width: 100%;
+  max-width: 280px;
+}
+
+.google-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.text-sm {
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.text-sm a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.text-sm a:hover {
+  text-decoration: underline;
+}
+section[aria-label="Notifications alt+T"] {
+  display: none !important;
+}
+/* Logged-in welcome box */
+.welcome-box {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.welcome-box p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Logout button */
+.logout-btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}

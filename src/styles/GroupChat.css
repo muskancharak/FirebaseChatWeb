@@ -1,0 +1,194 @@
+/* ========== Layout ========== */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div[style*="minHeight: 100vh"] {
+  width: 100%;
+}
+
+/* Sidebar */
+/* .groupsidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6ec7);
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+} */
+
+.groupsidebar {
+  width: 300px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(180deg, #ff6a00, #ff8c00, #ffcc00);
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid rgba(255,255,255,0.2);
+}
+
+
+.groupsidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.groupchat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.groupchat-list > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: 0.2s;
+}
+.groupchat-list > div:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.groupavatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.groupchat-name {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ========== Chat Wrapper ========== */
+.groupchat-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ff9a8b, #ff6a88, #8e44ad);
+
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+/* Header */
+.groupchat-header {
+  padding: 1rem;
+  background: linear-gradient(90deg, #ff6a00, #ff2e63, #6a11cb);
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Messages Container */
+.groupmessages-container {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.groupmessage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  word-wrap: break-word;
+}
+
+.groupmessage-item.send {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #f7971e, #ffd200); /* golden orange */
+  color: #fff;
+  flex-direction: row-reverse;
+}
+
+.groupmessage-item.receive {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.groupavatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.groupmessage-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupmessage-username {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.groupmessage-text {
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+/* ========== Input Area ========== */
+
+.groupsend-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  bottom: 0;
+}
+
+.groupsend-message input {
+  flex: 1;
+  height: 45px;
+  padding: 0 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+}
+
+.groupsend-message button {
+  height: 45px;
+  padding: 0 25px;   /* more padding for balance */
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff6a00, #ff8c00); /* bright orange */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;    /* prevents shrinking */
+  font-size: 1rem;   /* readable text */
+  width: auto;       /* button adjusts to text size */
+}
+
+
+.groupsend-message button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
